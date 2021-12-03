@@ -12,7 +12,7 @@ steps:
     client: '500'
     abapCredentialsId: 'WRGCTS21_4'
     repository: 'EspiUsik-WRGCTS21_4'
- gctsRollback:
+  gctsRollback:
     host: 'https://gprd.sapds.ru:44300'
     client: '500'
     abapCredentialsId: 'WRGCTS21_4'
