@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     checks_failed = false
-                    try{
+                    try {
                         gctsExecuteABAPUnitTests script: this
                     } catch (err) {
                         unstable ('UnitTest failed!')
