@@ -22,21 +22,21 @@ pipeline {
                     } catch (err) {
                         unstable ('UnitTest failed!')
                         checks_failed = true
-                    }
-                }
-            }
+                    } //catch
+                } //script 
+            } //steps
         } //stage
         stage ('Rollback') {
             when { expression { checks_failed == true } }
             steps {
                 gctsRollback script: this
-            }
-        }
+            } //steps
+        } //stage
         stage ('Build success') {
             when { expression { checks_failed == false } }
             steps {
                 echo 'Build success'
-            }
+            } //steps
         } //stage
     } //stages
 } //pipeline
