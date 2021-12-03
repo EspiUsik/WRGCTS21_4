@@ -3,7 +3,7 @@ collectTelemetryData: false
 verbose: true
 steps:
 gctsDeploy:
-host: 'http://gprd.sapds.ru:8000'
+host: 'https://gprd.sapds.ru:44300'
 client: '500'
 abapCredentialsId: 'WRGCTS21_4'
 repository: 'EspiUsik-WRGCTS21_4'
