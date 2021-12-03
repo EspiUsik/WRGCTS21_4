@@ -5,3 +5,4 @@ private section.
       !IV_1 type I
     returning
       value(RV_SUM) type I .
+  methods SELECT .
