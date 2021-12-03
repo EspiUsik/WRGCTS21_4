@@ -17,3 +17,8 @@ steps:
     client: '500'
     abapCredentialsId: 'WRGCTS21_4'
     repository: 'EspiUsik-WRGCTS21_4'
+  abapEnvironmentRunATCCheck:
+    abapCredentialsId: 'WRGCTS21_4'
+    host: 'gprd.sapds.ru:44300'
+    atcConfig: 'atcconfig.yml'
+    dockerPullImage: false
