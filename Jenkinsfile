@@ -8,7 +8,7 @@ stage ('Setup') {
     }
 }
     stage ('Deploy Commit') {
-    steps{
+    steps {
         gctsDeploy script: this
     }    
 }
