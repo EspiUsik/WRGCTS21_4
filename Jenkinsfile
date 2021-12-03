@@ -15,8 +15,28 @@ pipeline {
         } // stage
         stage ('Execute UnitTest') {
             steps {
-                gctsExecuteABAPUnitTests script: this
+                script{
+                    checks_failed = false
+                    try{
+                        gctsExecuteABAPUnitTests script: this
+                    } catch (err) {
+                        unstable ('UnitTest failed!')
+                        checks_failed = true
+                    }
+                }
             }
         }
+        stage ('Rollback') {
+            when { expression { checks_failed == true } }
+            steps {
+                gctsRollback script: this
+            }
+        }
+        stage ('Build success') {
+            when { expression { checks_failed == false } }
+            steps {
+                echo 'Build success'
+            }
+        } // stage
     } //stages
 } //pipeline
