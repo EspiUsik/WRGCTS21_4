@@ -37,6 +37,6 @@ pipeline {
             steps {
                 echo 'Build success'
             }
-        } // stage
+        } //stage
     } //stages
 } //pipeline
