@@ -15,7 +15,7 @@ pipeline {
         } // stage
         stage ('Execute UnitTest') {
             steps {
-                script{
+                script {
                     checks_failed = false
                     try{
                         gctsExecuteABAPUnitTests script: this
@@ -25,7 +25,7 @@ pipeline {
                     }
                 }
             }
-        }
+        } //stage
         stage ('Rollback') {
             when { expression { checks_failed == true } }
             steps {
