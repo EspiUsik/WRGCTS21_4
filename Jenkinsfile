@@ -4,8 +4,7 @@ agent any
 stages {
 stage ('Setup') {
     steps{
-        setupCommonPipelineEnvironment
-            script: this
+        setupCommonPipelineEnvironment script: this
     }
 }
 }
